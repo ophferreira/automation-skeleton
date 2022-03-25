@@ -11,3 +11,4 @@
 .settings
 *.versionsBackup
 test-output
+src/main/resources/config.azure.*
