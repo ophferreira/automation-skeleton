@@ -1,6 +1,5 @@
 /.idea/
 *.iml
-/target/
 /out/
 /lib
 /build/
@@ -10,5 +9,6 @@
 .project
 .settings
 *.versionsBackup
-test-output
 src/main/resources/config.azure.*
+target/
+test-output/
