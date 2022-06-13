@@ -6,9 +6,9 @@ import org.aeonbits.owner.Config.LoadType;
 
 @LoadPolicy(LoadType.MERGE)
 @Config.Sources({
-        "classpath:config.azure.${_ENVIRONMENT}.properties",
+        "classpath:config.azure.properties.${ENVIRONMENT}.properties",
         "classpath:config.azure.properties",
-        "classpath:config.${_ENVIRONMENT}.properties",
+        "classpath:config.${ENVIRONMENT}.properties",
         "classpath:config.properties",
         "system:properties",
         "system:env"})

@@ -1,38 +1,31 @@
-# Cucumber-Java Skeleton
+# Nome API - Squad
 
 This is the simplest possible build script setup for Cucumber using Java.
 There is nothing fancy like a webapp or browser testing. All this does is to show
 you how to install and run Cucumber!
- 
+
 
 # API Automation Test BDD framework
 API Automation Test is RestAssured based Cucumber framework to perform API testing. This project is useful as an example of API Testing with RestAssured and Java playing nicely together.
 
 ## Getting Started
 
-Git:
+**Git:**
 
-    git clone https://github.com/diegograssato/cucumber-java-skeleton.git
-    cd cucumber-java-skeleton
-
-Subversion:
-
-    svn checkout https://github.com/diegograssato/cucumber-java-skeleton/trunk cucumber-java-skeleton
-    cd cucumber-java-skeleton
-
-Or [download a zip](https://github.com/diegograssato/cucumber-java-skeleton/archive/main.zip) file.
+    git clone https://github.com/ophferreira/java-cucumber-skeleton.git
+    cd java-cucumber-skeleton
 
 ## Use Maven
 
-Open a command window and run:
+**Open a command window and run:**
 
     ./mvnw test
 
-With environment:
+**With environment:**
 
     ./mvnw clean test -DENVIRONMENT=dev
 
-Filter with tags:
+**Filter with tags:**
 
     ./mvnw clean test -Dcucumber.filter.tags="@myTag"
     ./mvnw clean test -Dcucumber.filter.tags=""@azure and not @ignore"
@@ -42,7 +35,7 @@ annotation on the `TestRunner` class tells JUnit to kick off Cucumber.
 
 ## Validating Json
 
-For creating JSON schema of an API response:
+**For creating JSON schema of an API response:**
 
 Go to https://jsonschema.net/home
 

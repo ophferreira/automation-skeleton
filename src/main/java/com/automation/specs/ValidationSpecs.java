@@ -44,13 +44,13 @@ public abstract class ValidationSpecs {
         assertThat(response.statusCode(), is(expectedCode));
     }
 
-    public void validationSchema(final String schemaName) {
+    public void validationSchema(final String schemaName, Integer expectedCode) {
 
         if (schemaName == null)
             throw new IllegalArgumentException("Schema name cannot be null.");
 
         response.then().assertThat().
-                statusCode(200).
+                statusCode(expectedCode).
                 body(matchesJsonSchema(this.getContract(schemaName)));
     }
 

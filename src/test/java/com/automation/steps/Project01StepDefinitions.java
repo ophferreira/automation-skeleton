@@ -40,17 +40,16 @@ public class Project01StepDefinitions {
         specs.verifyResponseStatusValue(expectedCode);
     }
 
-    @And("Validate the schema {string}")
-    public void validate_the_schema(final String schemaName) {
-        specs.validationSchema(schemaName);
+    @And("Validate the schema {string} and status code is {int}")
+    public void validate_the_schema_and_status_code_is(final String schemaName, Integer expectedCode) {
+        specs.validationSchema(schemaName, expectedCode);
     }
 
     @When("User calls {string} with {string} http request")
     public void user_calls_request_with_http_request(final String apiName, final String requestType) {
 
-        response = resource.getRequest(apiName, Method.valueOf(requestType), paramValue);
+//        response = resource.getRequest(apiName, Method.valueOf(requestType), paramValue);
         specs = new Project01Specs(response);
-
     }
 
     @Given("an address code {string}")

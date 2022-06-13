@@ -1,17 +1,15 @@
 package com.automation.config;
 
-
 import org.aeonbits.owner.Config;
 import org.aeonbits.owner.Config.LoadPolicy;
 import org.aeonbits.owner.Config.LoadType;
 
 import java.net.URI;
 
-
 @Config.HotReload
 @LoadPolicy(LoadType.MERGE)
 @Config.Sources({
-        "classpath:config.${_ENVIRONMENT}.properties",
+        "classpath:config.${ENVIRONMENT}.properties",
         "classpath:config.properties",
         "system:properties",
         "system:env"})
