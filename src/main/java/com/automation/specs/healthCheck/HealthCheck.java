@@ -1,8 +1,8 @@
 package com.automation.specs.healthCheck;
 
-import com.automation.config.Configuration;
-import com.automation.config.ConfigurationManager;
 import com.automation.specs.InitialStateSpecs;
+import config.Configuration;
+import config.ConfigurationManager;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;

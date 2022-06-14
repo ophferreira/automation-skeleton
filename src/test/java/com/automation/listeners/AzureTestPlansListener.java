@@ -1,11 +1,11 @@
 package com.automation.listeners;
 
-import com.automation.resources.azure.domain.TestRun;
-import com.automation.resources.azure.domain.TestRunOutcomeState;
-import com.automation.resources.azure.exception.TestPlansException;
-import com.automation.resources.azure.resource.TestResource;
-import com.automation.resources.azure.useCase.FinishTestExecutionUseCase;
-import com.automation.resources.azure.useCase.StartTestExecutionUseCase;
+import azure.domain.TestRun;
+import azure.domain.TestRunOutcomeState;
+import azure.exception.TestPlansException;
+import azure.resource.TestResource;
+import azure.useCase.FinishTestExecutionUseCase;
+import azure.useCase.StartTestExecutionUseCase;
 import io.cucumber.plugin.ConcurrentEventListener;
 import io.cucumber.plugin.event.*;
 import lombok.extern.slf4j.Slf4j;
@@ -100,7 +100,6 @@ public class AzureTestPlansListener implements ConcurrentEventListener {
                 log.info(e.getMessage());
             }
         }
-
     }
 
     private void handleTestCaseFinished(TestCaseFinished event) {
@@ -135,8 +134,5 @@ public class AzureTestPlansListener implements ConcurrentEventListener {
                 log.info("[ {} ] - {} - {}", testCaseExecution.getId(), testCase.getName(), testRunOutcomeState.name());
             }
         }
-
-
     }
-
 }

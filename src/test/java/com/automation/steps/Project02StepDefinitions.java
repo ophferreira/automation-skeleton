@@ -1,7 +1,6 @@
 package com.automation.steps;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -27,5 +26,4 @@ public class Project02StepDefinitions {
     public void will_be_invalid() {
         assertThat(true, is(true));
     }
-
 }

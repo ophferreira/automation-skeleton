@@ -1,7 +1,7 @@
 package com.automation.specs;
 
-import com.automation.config.Configuration;
-import com.automation.config.ConfigurationManager;
+import config.Configuration;
+import config.ConfigurationManager;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
@@ -127,11 +127,9 @@ public abstract class ValidationSpecs {
         if (list.isEmpty())
             throw new IllegalArgumentException("List cannot be null.");
 
-
         if (size == null)
             throw new IllegalArgumentException("Size cannot be null.");
 
         assertThat(list, hasSize(size));
     }
-
 }

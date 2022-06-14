@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class RestRequests {
 
-    public Response getRequest(final String apiName, final Method requestType, String paramValue, String paramValue2) {
+    public Response getRequest(final String apiName, final Method requestType, String paramValue) {
 
         final Resources resourceAPI = Resources.valueOf(apiName);
 
@@ -16,7 +16,7 @@ public class RestRequests {
                 given().
                         spec(InitialStateSpecs.set()).
                         when().
-                            request(requestType.toString(), resourceAPI.getResource(), paramValue, paramValue2).
+                            request(requestType.toString(), resourceAPI.getResource(), paramValue).
                         then().
                             log().ifError().
                         extract().

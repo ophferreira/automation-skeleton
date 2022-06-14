@@ -1,7 +1,7 @@
 package com.automation.specs;
 
-import com.automation.config.Configuration;
-import com.automation.config.ConfigurationManager;
+import config.Configuration;
+import config.ConfigurationManager;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;

@@ -3,10 +3,7 @@ package com.automation.steps;
 import com.automation.resources.rest.RestRequests;
 import com.automation.specs.Project01Specs;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
@@ -47,8 +44,7 @@ public class Project01StepDefinitions {
 
     @When("User calls {string} with {string} http request")
     public void user_calls_request_with_http_request(final String apiName, final String requestType) {
-
-//        response = resource.getRequest(apiName, Method.valueOf(requestType), paramValue);
+        response = resource.getRequest(apiName, Method.valueOf(requestType), paramValue);
         specs = new Project01Specs(response);
     }
 

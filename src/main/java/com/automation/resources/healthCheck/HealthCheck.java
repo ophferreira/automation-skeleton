@@ -6,7 +6,6 @@ import static io.restassured.RestAssured.given;
 
 public class HealthCheck {
 
-
     public Response healthCheck() {
 
         return
