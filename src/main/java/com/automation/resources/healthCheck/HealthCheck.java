@@ -7,7 +7,6 @@ import static io.restassured.RestAssured.given;
 public class HealthCheck {
 
     public Response healthCheck() {
-
         return
                 given().
                         spec(com.automation.specs.healthCheck.HealthCheck.healthSpec()).
